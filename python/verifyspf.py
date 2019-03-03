@@ -18,7 +18,7 @@ def main():
     result, explanation = spf.check2(sys.argv[1], sys.argv[2], sys.argv[3])
     print('[' + os.path.basename(__file__) + '] (' + result + ', ' + explanation + ')')
 
-    if result == 'pass':
+    if result in ['pass', 'none', 'neutral']:
         sys.exit(0)
     else:
         # Invalid spf, exit with code 11.
